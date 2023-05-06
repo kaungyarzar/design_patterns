@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "device-provisioning"
+version = "0.1.0"
+description = ""
+authors = ["Kaung Yar Zar <kaung.yarzar@frontiir.net>"]
+readme = "README.md"
+packages = [{include = "provisioning", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+click = "^8.1.3"
+
+[tool.poetry.scripts]
+provision-ctl="provisioning.cli:entrypoint"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
